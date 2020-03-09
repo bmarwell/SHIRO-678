@@ -1,0 +1,10 @@
+<server description="SHIRO-678">
+  <featureManager>
+    <feature>localConnector-1.0</feature>
+    <feature>monitor-1.0</feature>
+
+    <feature>jsonb-1.0</feature>
+    <feature>jaxrs-2.1</feature>
+  </featureManager>
+
+</server>
