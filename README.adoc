@@ -1,0 +1,34 @@
+= SHIRO-678 (garbled strings) test case with OpenLiberty.io
+
+Example for posting a string without and with a `JSESSIONID` cookie.
+If you add this cookie, Unicode will work.
+
+== Expected output
+
+Adding a cookie should not mess with the encoding. The test cases make sure of this.
+
+== Actual output
+
+When not adding a `JSESSIONID` cookie, the strings from the form entity will be mis-interpreted.
+
+== Execution
+
+* Run `mvn clean liberty:dev` to run hot tests (`*IT.java`) on liberty.
+* Press `&lt;Enter&gt;` to execute the integration tests again.
+* The stacktrace is visible on stdout and in the logs.
+* Run `mvn clean test` to run the unit tests (none atm).
+
+== Noteworthy
+
+=== Liberty configuration
+
+* `server.xml` is redundant to feature config in `pom.xml`.
+   This is on purpose to show how easy it is to configure OpenLiberty.
+* look at `jvm.options` for Liberty-related jvm options.
+* Run `mvn clean liberty:run` to not execute tests and not re-deploy on code change.
+* Tests are somehow executed twice.
+
+=== Logging
+
+* Create and modify `logback.xml` and `logback-test.xml` respectively.
+* JCL logging (apache) is redirected to logback.

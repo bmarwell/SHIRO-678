@@ -7,4 +7,12 @@
     <feature>jaxrs-2.1</feature>
   </featureManager>
 
+  <!-- the default logging timestamp format depends on the locale. -->
+  <logging isoDateFormat="true" />
+
+  <!-- load servlets immediately. -->
+  <webContainer deferServletLoad="false" />
+
+  <!-- if we were using CDI, do not scan all archives. -->
+  <cdi12 enableImplicitBeanArchives="false" />
 </server>
