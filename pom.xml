@@ -49,19 +49,6 @@
       <optional>true</optional>
     </dependency>
 
-    <!-- Shiro + cache -->
-    <dependency>
-      <groupId>org.apache.shiro</groupId>
-      <artifactId>shiro-web</artifactId>
-      <version>${dependency.shiro.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.shiro</groupId>
-      <artifactId>shiro-servlet-plugin</artifactId>
-      <version>${dependency.shiro.version}</version>
-    </dependency>
-
     <dependency>
       <groupId>org.apache.shiro</groupId>
       <artifactId>shiro-jaxrs</artifactId>
